@@ -154,6 +154,13 @@ im('test.psd[0]')
 .write("NULL:", function (err) { // throw away the collection of layers
   // ...
 });
+
+// nice
+gm('/path/to/my/img.jpg')
+.options({nice: 10})
+.write('/path/to/resize.png', function (err) {
+  if (!err) console.log('done');
+});
 ```
 
 ## Streams
