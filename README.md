@@ -160,6 +160,21 @@ gm('/path/to/my/img.jpg')
 .options({nice: 10})
 .write('/path/to/resize.png', function (err) {
   if (!err) console.log('done');
+
+// distorting an image
+// array of arrays with from -> to objects
+// fx,fy -> tx,ty
+
+// It will only works with imageMagick subclass
+gm("image.jpg")
+.distort([
+    [{x:99,y:71}, {x:0,y:0}],
+    [{x:299,y:71}, {x:479,y:0}],
+    [{x:100,y:270}, {x:0,y:477}],
+    [{x:299,y:270}, {x:479,y:476}],
+])
+.write("/path/to/brandNewImg.jpg", function (err) {
+  // ...
 });
 ```
 
