@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "async": "~3.2.0",
-    "nsp": "^2.8.1"
+    "nsp": "^3.2.1"
   },
   "engines": {
     "node": ">= 0.10.0"
